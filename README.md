@@ -22,3 +22,9 @@ data:
       - 192.168.1.240-192.168.1.250
 ```
 
+Test it with nginx container
+
+```
+kubectl run nginx --image=nginx --port=80
+kubectl expose deployment nginx --type=LoadBalancer --name=nginx-service
+```
